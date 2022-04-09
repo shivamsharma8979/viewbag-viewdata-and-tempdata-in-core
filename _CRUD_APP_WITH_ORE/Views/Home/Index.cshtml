@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>======viewBag====</h1>
+<h1>@ViewBag.data</h1>
+<h1>@ViewBag.data1</h1>
+<h1>@ViewBag.date</h1>
+<ul>
+    @foreach (var item in ViewBag.List)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+<h1>======viewdata====</h1>
+<h1>@ViewData["data"]</h1>
+<h1>@ViewData["data1"]</h1>
+<h1>@ViewData["data2"]</h1>
+<ul>
+    @foreach (var item in (List<string>)ViewData["List"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+<h1>======tempdata====</h1>
+<h1>@TempData["data"]</h1>
+<h1>@TempData["data1"]</h1>
+<h1>@TempData["data2"]</h1>
+<ul>
+    @foreach (var item in (List<string>)TempData["List"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
